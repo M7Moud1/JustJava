@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    tools:context="com.example.android.justjava.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Name"
+            android:id="@+id/Name"
+            android:inputType="textCapWords"/>
+        <TextView
+            android:text="@string/topping"
+            android:textAllCaps="true"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/HeaderTextStyle" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped cream"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:id="@+id/Whipped_cream"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:id="@+id/Chocolate"/>
+
+        <TextView
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Quantity"
+            style="@style/HeaderTextStyle"
+            android:textColor="@color/colorPrimaryDark"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/colorPrimary"
+                android:onClick="increment"
+                android:text="+"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/colorPrimary"
+                android:onClick="decrement"
+                android:text="-"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+
+            android:text="ORDER Summary"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/HeaderTextStyle"
+            />
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="$0"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="submitOrder"
+            android:text="ORDER"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
